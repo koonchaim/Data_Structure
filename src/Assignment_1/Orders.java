@@ -12,14 +12,14 @@ public class Orders {
 		Orders sc1 = new Orders();
 		File file = new File("orders.txt");
 		Scanner scanner = new Scanner(file);
-		System.out.println("√À—  ‘π§È“" + "\t" + "™◊ËÕ ‘π§È“" + "\t" + "√“§“ ‘π§È“");
+		System.out.println("‡∏£‡∏´‡∏±‡∏™‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤" + "\t" + "‡∏ä‡∏∑‡πà‡∏≠‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤" + "\t" + "‡∏£‡∏≤‡∏Ñ‡∏≤‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤");
 		while (scanner.hasNext()) {
 			String text = scanner.nextLine();
 			Scanner data = new Scanner(text);
 
-			String id = data.next(); // ∫—π∑÷°µ—«Õ—°…√«√√§∑’Ë 1
-			String name = data.next(); // ∫—π∑÷°µ—«Õ—°…√«√√§∑’Ë 2
-			String price = data.next(); // ∫—π∑÷°µ—«Õ—°…√«√√§∑’Ë 3
+			String id = data.next(); // ‡∏ö‡∏±‡∏ô‡∏ó‡∏∂‡∏Å‡∏ï‡∏±‡∏ß‡∏≠‡∏±‡∏Å‡∏©‡∏£‡∏ß‡∏£‡∏£‡∏Ñ‡∏ó‡∏µ‡πà 1
+			String name = data.next(); // ‡∏ö‡∏±‡∏ô‡∏ó‡∏∂‡∏Å‡∏ï‡∏±‡∏ß‡∏≠‡∏±‡∏Å‡∏©‡∏£‡∏ß‡∏£‡∏£‡∏Ñ‡∏ó‡∏µ‡πà 2
+			String price = data.next(); // ‡∏ö‡∏±‡∏ô‡∏ó‡∏∂‡∏Å‡∏ï‡∏±‡∏ß‡∏≠‡∏±‡∏Å‡∏©‡∏£‡∏ß‡∏£‡∏£‡∏Ñ‡∏ó‡∏µ‡πà 3
 
 			System.out.println(id + "\t" + name + "\t" + price);
 		}
@@ -31,7 +31,7 @@ public class Orders {
 
 		do {
 			Scanner input = new Scanner(System.in);
-			System.out.print("°√ÿ≥“°√Õ°√À—  ‘π§È“  : ");
+			System.out.print("‡∏Å‡∏£‡∏∏‡∏ì‡∏≤‡∏Å‡∏£‡∏≠‡∏Å‡∏£‡∏´‡∏±‡∏™‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤  : ");
 			String IdOrder = input.next();
 
 			File file = new File("orders.txt");
@@ -46,13 +46,13 @@ public class Orders {
 					String price = input1.next();
 					if (id.equals(IdOrder)) {
 						Scanner inputQty = new Scanner(System.in);
-						System.out.print("°√Õ°®”π«π : ");
+						System.out.print("‡∏Å‡∏£‡∏≠‡∏Å‡∏à‡∏≥‡∏ô‡∏ß‡∏ô : ");
 						int qty = inputQty.nextInt();
 
 						Item item = new Item(id, name, price, qty);
 						orderList.add(item);
 						System.out.println("====================================");
-						System.out.println("√À—  ‘π§È“\t™◊ËÕ ‘§È“\t√“§“\t®”π«π\t√«¡");
+						System.out.println("‡∏£‡∏´‡∏±‡∏™‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤\t‡∏ä‡∏∑‡πà‡∏≠‡∏™‡∏¥‡∏Ñ‡πâ‡∏≤\t‡∏£‡∏≤‡∏Ñ‡∏≤\t‡∏à‡∏≥‡∏ô‡∏ß‡∏ô\t‡∏£‡∏ß‡∏°");
 						System.out.println("====================================");
 						int sum = 0;
 						for (Item items : orderList) {
@@ -69,13 +69,13 @@ public class Orders {
 							sum += (Integer.parseInt(items.getPrice()) * items.getQty());
 						}
 						System.out.println("====================================");
-						System.out.println("Total : " + sum + " ﬂ");
+						System.out.println("Total : " + sum + " ‡∏ø");
 						System.out.println("====================================");
 					}
 				}
 			}
 			Scanner inputExit = new Scanner(System.in);
-			System.out.print("°¥ 1 ‡æ◊ËÕ´◊ÈÕµËÕ °¥ 2 ‡æ◊ËÕÕÕ°®“°√“¬°“√ : ");
+			System.out.print("‡∏Å‡∏î 1 ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡∏ã‡∏∑‡πâ‡∏≠‡∏ï‡πà‡∏≠ ‡∏Å‡∏î 2 ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡∏≠‡∏≠‡∏Å‡∏à‡∏≤‡∏Å‡∏£‡∏≤‡∏¢‡∏Å‡∏≤‡∏£ : ");
 			num = inputExit.nextInt();
 
 			scanner.close();
@@ -86,7 +86,7 @@ public class Orders {
 	public void SellItem(ArrayList<Item> buy) {
 		int sum = 0, total = 0, count = 1;
 		System.out.println("====================================");
-		System.out.println("≈”¥—∫\t√À—  ‘π§È“\t™◊ËÕ ‘§È“\t√“§“\t®”π«π\t√«¡");
+		System.out.println("‡∏•‡∏≥‡∏î‡∏±‡∏ö\t‡∏£‡∏´‡∏±‡∏™‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤\t‡∏ä‡∏∑‡πà‡∏≠‡∏™‡∏¥‡∏Ñ‡πâ‡∏≤\t‡∏£‡∏≤‡∏Ñ‡∏≤\t‡∏à‡∏≥‡∏ô‡∏ß‡∏ô\t‡∏£‡∏ß‡∏°");
 		System.out.println("====================================");
 		for (Item item : buy) {
 			System.out.println(count + "\t" + item.getId() + "\t" + item.getName() + "\t"
@@ -96,19 +96,19 @@ public class Orders {
 			count++;
 		}
 		System.out.println("====================================");
-		System.out.println("Total : " + sum + " ﬂ");
+		System.out.println("Total : " + sum + " ‡∏ø");
 		System.out.println("====================================");
 
 		Scanner inputRemove = new Scanner(System.in);
-		System.out.print("°√Õ°≈”¥—∫∑’ËµÈÕß°“√¢“¬ : ");
+		System.out.print("‡∏Å‡∏£‡∏≠‡∏Å‡∏•‡∏≥‡∏î‡∏±‡∏ö‡∏ó‡∏µ‡πà‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡∏Ç‡∏≤‡∏¢ : ");
 		int num = inputRemove.nextInt();
 
 		int remove = num - 1;
 
 		buy.remove(remove);
-
+		count = 1;
 		System.out.println("====================================");
-		System.out.println("≈”¥—∫\t√À—  ‘π§È“\t™◊ËÕ ‘§È“\t√“§“\t®”π«π\t√«¡");
+		System.out.println("‡∏•‡∏≥‡∏î‡∏±‡∏ö\t‡∏£‡∏´‡∏±‡∏™‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤\t‡∏ä‡∏∑‡πà‡∏≠‡∏™‡∏¥‡∏Ñ‡πâ‡∏≤\t‡∏£‡∏≤‡∏Ñ‡∏≤\t‡∏à‡∏≥‡∏ô‡∏ß‡∏ô\t‡∏£‡∏ß‡∏°");
 		System.out.println("====================================");
 		for (Item item : buy) {
 			System.out.println(count + "\t" + item.getId() + "\t" + item.getName() + "\t"
@@ -118,7 +118,7 @@ public class Orders {
 			count++;
 		}
 		System.out.println("====================================");
-		System.out.println("Total : " + total + " ﬂ");
+		System.out.println("Total : " + total + " ‡∏ø");
 		System.out.println("====================================");
 	}
 }

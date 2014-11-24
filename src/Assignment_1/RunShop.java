@@ -7,7 +7,7 @@ public class RunShop {
 
 	public static void main(String[] args) {
 		Orders orders = new Orders();
-		int num = 0; // ��Ƿ��й�����º��º�������͹�
+		int num = 0; // ตัวที่จะนำไปเปรียบเทียบค่าในเงื่อนไข
 		Scanner input = new Scanner(System.in);
 		// Menu menu = new Menu();
 		ArrayList<Item> list = new ArrayList<Item>();
@@ -17,15 +17,15 @@ public class RunShop {
 				System.out
 						.println("\n*******************************************************************\n"
 								+ "\tWelcome to the IT Shop House!\n\n"
-								+ "\t\t1. �����Թ��� (Buy Item)\n"
-								+ "\t\t2. ����Թ��� (Sell Item)\n"
-								+ "\t\t3. ����÷ӧҹ (Exit)\n\n"
-								+ "\t��س����͡�����Ţ�����Ѻ��ú�ԡ�õ����1 - 3\n"
+								+ "\t\t1. ซื้อสินค้า (Buy Item)\n"
+								+ "\t\t2. ขายสินค้า (Sell Item)\n"
+								+ "\t\t3. จบการทำงาน (Exit)\n\n"
+								+ "\tกรุณาเลือกหมายเลขเพื่อรับการบริการตั้งแต่1 - 3\n"
 								+ "*******************************************************************\n");
 				num = input.nextInt();
 
 				if (num < 1 || num > 3) {
-					throw new Exception("��سҡ�͡��ҵ���Ţ 1-3 ��ҹ�� \n");
+					throw new Exception("กรุณากรอกค่าตัวเลข 1-3 เท่านั้น \n");
 				}
 
 				switch (num) {
@@ -42,7 +42,7 @@ public class RunShop {
 				}
 
 			} catch (NumberFormatException e) {
-				System.out.println("��سҡ�͡੾�е���Ţ !!");
+				System.out.println("กรุณากรอกเฉพาะตัวเลข !!");
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
